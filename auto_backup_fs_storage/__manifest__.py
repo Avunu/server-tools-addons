@@ -7,7 +7,7 @@
     "version": "18.0.1.0.0",
     "category": "Technical",
     "author": "Avunu LLC",
-    "website": "https://avu.nu",
+    "website": "https://github.com/Avunu/server-tools-addons",
     "license": "AGPL-3",
     "depends": [
         "auto_backup",  # db.backup model, cron and retention logic being extended
