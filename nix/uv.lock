@@ -1762,7 +1762,7 @@ wheels = [
 
 [[package]]
 name = "odoo-addon-auto-backup-fs-storage"
-version = "18.0.1.0.0.4"
+version = "18.0.1.0.0.5"
 source = { editable = "../auto_backup_fs_storage" }
 dependencies = [
     { name = "odoo" },
