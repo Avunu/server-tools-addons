@@ -24,10 +24,11 @@ class DbBackup(models.Model):
 
     @api.depends("fs_storage_id")
     def _compute_name(self):
-        super()._compute_name()
+        res = super()._compute_name()
         for rec in self.filtered(lambda r: r.method == "fs_storage"):
             code = rec.fs_storage_id.code or "?"
             rec.name = f"{code}://{rec.folder}"
+        return res
 
     def _fs_backup_dir(self):
         """Folder inside the storage, without a leading slash."""
