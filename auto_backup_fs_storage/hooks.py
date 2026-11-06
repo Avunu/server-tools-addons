@@ -11,7 +11,9 @@ def post_init_hook(env_or_cr, registry=None):
         else api.Environment(env_or_cr, SUPERUSER_ID, {})
     )
     storage = env.ref("auto_backup_fs_storage.odoo_backup", raise_if_not_found=False)
-    if not storage or env["db.backup"].search_count([("fs_storage_id", "=", storage.id)]):
+    if not storage or env["db.backup"].search_count(
+        [("fs_storage_id", "=", storage.id)]
+    ):
         return
     env["db.backup"].create(
         {

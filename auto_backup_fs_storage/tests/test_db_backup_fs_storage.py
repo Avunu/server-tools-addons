@@ -58,8 +58,9 @@ class TestDbBackupFsStorage(TransactionCase):
 
     def test_backup_with_list_db_disabled(self):
         guarded = db.check_db_management_enabled(self._dump)
-        with patch("odoo.service.db.dump_db", guarded), patch.dict(
-            config.options, {"list_db": False}
+        with (
+            patch("odoo.service.db.dump_db", guarded),
+            patch.dict(config.options, {"list_db": False}),
         ):
             self.backup.action_backup()
         self.assertEqual(len(self.storage.fs.ls("mydb", detail=False)), 1)
