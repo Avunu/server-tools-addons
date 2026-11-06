@@ -17,8 +17,7 @@ dependencies = [
     # >>> odoo-nix: install set (managed from modules.txt) >>>
     "odoo",
     "packaging",
-    "odoo-addon-auto_backup",
-    "odoo-addon-fs_storage",
+    "odoo-addon-auto_backup_fs_storage",
     # <<< odoo-nix: install set <<<
 ]
 
@@ -27,7 +26,6 @@ dependencies = [
 # relock leaves this block alone.
 dev = [
     "debugpy",
-    "ruff",
     # Odoo's --dev=reload watcher needs a filesystem watcher it does not declare.
     "watchdog",
     # Odoo's test runner imports freezegun, and browser tours need
@@ -54,6 +52,7 @@ constraint-dependencies = ["setuptools<81"]
     "odoo-addon-attachment_unindex_content" = { path = "../.odoo-nix/modules/server-tools/attachment_unindex_content" }
     "odoo-addon-auditlog" = { path = "../.odoo-nix/modules/server-tools/auditlog" }
     "odoo-addon-auto_backup" = { path = "../.odoo-nix/modules/server-tools/auto_backup" }
+    "odoo-addon-auto_backup_fs_storage" = { path = "../auto_backup_fs_storage", editable = true }
     "odoo-addon-autovacuum_message_attachment" = { path = "../.odoo-nix/modules/server-tools/autovacuum_message_attachment" }
     "odoo-addon-base_conditional_image" = { path = "../.odoo-nix/modules/server-tools/base_conditional_image" }
     "odoo-addon-base_cron_exclusion" = { path = "../.odoo-nix/modules/server-tools/base_cron_exclusion" }
@@ -156,11 +155,16 @@ packages = []
 # >>> odoo-nix: sdist build deps (managed) >>>
 "docopt" = ["setuptools"]
 "odoo" = ["setuptools"]
-"odoo-addon-auto-backup" = ["setuptools"]
-"odoo-addon-fs-storage" = ["setuptools"]
 "ofxparse" = ["setuptools"]
 "pysftp" = ["setuptools"]
 "python-ldap" = ["setuptools"]
 "rjsmin" = ["setuptools"]
 "vobject" = ["setuptools"]
 # <<< odoo-nix: sdist build deps (managed) <<<
+
+[tool.odoo-nix]
+schema = 1
+profile = "github:Avunu/odoo-standards-profile/v1"
+
+[tool.odoo-nix.icons]
+src-icon = "assets/icons/server-tools-addons.png"
