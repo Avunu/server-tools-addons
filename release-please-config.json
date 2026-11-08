@@ -1,0 +1,79 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "release-type": "simple",
+  "include-component-in-tag": true,
+  "include-v-in-tag": false,
+  "tag-separator": ".",
+  "separate-pull-requests": false,
+  "group-pull-request-title-pattern": "chore(release): release ${branch}",
+  "pull-request-header": "Merging this releases the addons below on 18.0: release-please tags each `<addon>-18.0.x.y.z` and publishes its GitHub release, which carries the addon's zip and wheel.",
+  "changelog-sections": [
+    {
+      "type": "feat",
+      "section": "Features"
+    },
+    {
+      "type": "fix",
+      "section": "Bug Fixes"
+    },
+    {
+      "type": "perf",
+      "section": "Performance Improvements"
+    },
+    {
+      "type": "revert",
+      "section": "Reverts"
+    },
+    {
+      "type": "deps",
+      "section": "Dependencies"
+    },
+    {
+      "type": "docs",
+      "section": "Documentation",
+      "hidden": true
+    },
+    {
+      "type": "style",
+      "section": "Styles",
+      "hidden": true
+    },
+    {
+      "type": "chore",
+      "section": "Miscellaneous Chores",
+      "hidden": true
+    },
+    {
+      "type": "refactor",
+      "section": "Code Refactoring",
+      "hidden": true
+    },
+    {
+      "type": "test",
+      "section": "Tests",
+      "hidden": true
+    },
+    {
+      "type": "build",
+      "section": "Build System",
+      "hidden": true
+    },
+    {
+      "type": "ci",
+      "section": "Continuous Integration",
+      "hidden": true
+    }
+  ],
+  "packages": {
+    "auto_backup_fs_storage": {
+      "component": "auto_backup_fs_storage-18.0",
+      "exclude-paths": [
+        "auto_backup_fs_storage/tests",
+        "auto_backup_fs_storage/readme",
+        "auto_backup_fs_storage/i18n",
+        "auto_backup_fs_storage/i18n_extra",
+        "auto_backup_fs_storage/static/description"
+      ]
+    }
+  }
+}
