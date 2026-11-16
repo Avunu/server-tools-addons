@@ -68,6 +68,7 @@ constraint-dependencies = ["setuptools<81"]
     "odoo-addon-base_remote" = { path = "../.odoo-nix/modules/server-tools/base_remote" }
     "odoo-addon-base_search_fuzzy" = { path = "../.odoo-nix/modules/server-tools/base_search_fuzzy" }
     "odoo-addon-base_sequence_option" = { path = "../.odoo-nix/modules/server-tools/base_sequence_option" }
+    "odoo-addon-base_sequence_template" = { path = "../.odoo-nix/modules/server-tools/base_sequence_template" }
     "odoo-addon-base_sparse_field_list_support" = { path = "../.odoo-nix/modules/server-tools/base_sparse_field_list_support" }
     "odoo-addon-base_technical_user" = { path = "../.odoo-nix/modules/server-tools/base_technical_user" }
     "odoo-addon-base_temporary_action" = { path = "../.odoo-nix/modules/server-tools/base_temporary_action" }
