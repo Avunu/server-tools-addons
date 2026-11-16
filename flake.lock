@@ -454,11 +454,11 @@
     "oca-storage": {
       "flake": false,
       "locked": {
-        "lastModified": 1793188016,
-        "narHash": "sha256-wq1656tDRNi0OXcT1Jz16RpOyDSpVmchhuIE4YUlXmc=",
+        "lastModified": 1793973557,
+        "narHash": "sha256-o0VsmCiPodpeN01VeF/87VxP49TueX3U32IUqFKEaGA=",
         "owner": "OCA",
         "repo": "storage",
-        "rev": "052b28e8d75011af8dc6eb80825544010ed5ac83",
+        "rev": "ee6d6e81348d9cf55f7e9df300d27ab331bf0c6d",
         "type": "github"
       },
       "original": {
