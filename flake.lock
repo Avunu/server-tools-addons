@@ -437,11 +437,11 @@
     "oca-server-tools": {
       "flake": false,
       "locked": {
-        "lastModified": 1793782081,
-        "narHash": "sha256-kWdcqtZZaIdhbe3KLuwjGlGJXU7prt4mmzq7lYXJDEo=",
+        "lastModified": 1794586613,
+        "narHash": "sha256-NjN5j8IUFN/qMzk2+k1u91oyE6oeKfrQrL+giCWD2DQ=",
         "owner": "OCA",
         "repo": "server-tools",
-        "rev": "deb4fbc76d64afd3bfa72800482ec3dd3c2f6689",
+        "rev": "55308ba824bc3db9383bcd28c35ccd1e87ed04d2",
         "type": "github"
       },
       "original": {
